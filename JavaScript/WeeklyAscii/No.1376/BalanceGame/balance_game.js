@@ -5,14 +5,16 @@
 // Last update: Tue Mar  8 18:04:43 JST 2022
 //
 
-let canvas, context, world;
-const scale = 10; // HTMLファイル中で指定した canvas のサイズは 600x600．一方，以下では 60x60 の空間を前提としているため scale は 10 となる
-const bodyDef = new Box2D.Dynamics.b2BodyDef;
-const fixDef = new Box2D.Dynamics.b2FixtureDef;
-const b2Vec2 = Box2D.Common.Math.b2Vec2;
-const blocks = new Array();
-let selectBlock = null;
-let bar, length = 30;
+let canvas, context, world;                     // キャンバス，物理ワールド
+const scale = 10;                               // 縮尺
+// HTMLファイル中で指定した canvas のサイズは 600x600．一方，以下では 60x60 の空間を前提としているため scale は 10 となる
+
+const bodyDef = new Box2D.Dynamics.b2BodyDef;   // 物体の定義
+const fixDef = new Box2D.Dynamics.b2FixtureDef; // 形状の定義
+const b2Vec2 = Box2D.Common.Math.b2Vec2;        // 2D ベクトル
+const blocks = new Array();                     // ブロックの配列（オブジェクトと辺の数）
+let selectBlock = null;                         // 選択中のブロック
+let bar, length = 30;                           // シーソーとその長さ
 
 const init = () => {
     // キャンバスの取得
@@ -31,56 +33,56 @@ const init = () => {
     setBox(30, 35, 1, 1);  // (30,35) を中心とする 幅1 高さ1の箱（支点）を配置
     // シーソー を配置
     bar = setBox(30, 30, length / 2, 1, Box2D.Dynamics.b2Body.b2_dynamicBody);
-    // ブロックの配置（6,5,4,3角形を各10個）
+    // ブロックの配置（六,五,四,三角形を各10個ずつ用意）
     for (let i = 0; i < 40; i++) {
-	const n = 6 - Math.floor(i / 10); // n = 6,5,4,3
-	const [x, y] = [(i - Math.floor(i / 10) * 10) * 6 + 3, 55 - Math.floor(i / 10) * 5];
-	blocks.push({"obj":setPolygon(x, y, n), "n":n});
+        const n = 6 - Math.floor(i / 10); // n = 6,5,4,3
+        const [x, y] = [(i - Math.floor(i / 10) * 10) * 6 + 3, 55 - Math.floor(i / 10) * 5];
+        blocks.push({"obj":setPolygon(x, y, n), "n":n});
     }
 
     // マウスイベントの登録 // ブロックを積む
     document.addEventListener('mousedown', (event) => {
-	const [x, y] = getPoint(event);
-	if (selectBlock == null) {
-	    // ブロックを選択
-	    let min = 60; // マウスポインタの位置とn角形のブロックとの距離がこの値より大きかったら対象となる当該ブロック中にはいないと判断する
-	    for (const block of blocks) {
-		// マウスポインタと現在着目しているブロックの距離を算出
-		const pos = block.obj.GetPosition();
-		const d = ((x - pos.x) ** 2 + (y - pos.y) ** 2) ** 0.5;
-		if ((d < (block.n / 2)) && (d < min)) { // block.n : 当該ブロックが何角形かを示す
-		    // 最小の d とその d をもたらしたブロックを selectBlock に記録
-		    selectBlock = block.obj;
-		    min = d;
-		}
-	    }
-	    // マウスポインタが位置するブロックが見つかったので当該ブロックをマウスポインタの位置に移動する
-	    if (selectBlock != null) {
-		selectBlock.SetPosition(new b2Vec2(x, y));
-	    }
-	}
+        const [x, y] = getPoint(event);
+        if (selectBlock == null) {
+            // ブロックを選択
+            let min = 60; // マウスポインタの位置とN角形のブロックとの距離がこの値より大きかったら当該ブロック中にはいないと判断する
+            for (const block of blocks) {
+                // マウスポインタと現在着目しているブロックの距離を算出
+                const pos = block.obj.GetPosition();
+                const d = ((x - pos.x) ** 2 + (y - pos.y) ** 2) ** 0.5;
+                if ((d < (block.n / 2)) && (d < min)) { // block.n : 当該ブロックの辺の数を示す
+                    // 最小の d とその d をもたらしたブロックを selectBlock に記録
+                    selectBlock = block.obj;
+                    min = d;
+                }
+            }
+            // マウスポインタが位置するブロックが見つかったので当該ブロックをマウスポインタの位置に移動する
+            if (selectBlock != null) {
+                selectBlock.SetPosition(new b2Vec2(x, y));
+            }
+        }
     });
 
     // マウスイベントの登録 // マウスポインタの位置にブロックを動かす
     document.addEventListener('mousemove', (event) => {
-	const [x, y] = getPoint(event);
-	if (selectBlock != null) {
-	    selectBlock.SetAwake(false);
-	    selectBlock.SetPosition(new b2Vec2(x, y));
-	}
+        const [x, y] = getPoint(event);
+        if (selectBlock != null) {
+            selectBlock.SetAwake(false);
+            selectBlock.SetPosition(new b2Vec2(x, y));
+        }
     });
 
     // マウスイベントの登録 // ブロックを画面中央にワープさせて落下させる
     document.addEventListener('mouseup', (event) => {
-	const [x, y] = getPoint(event);
-	if (selectBlock != null) {
-	    // ブロックを掴んでいてマウスポインタが壁と床で囲われている範囲外なら，ブロックを (30,40) にワープ?させて落下させる
-	    if ((x < 0) || (x > 60) || (y > 60)) {
-		selectBlock.SetPosition(new b2Vec2(30, 40));
-	    }
-	    selectBlock.SetAwake(true);
-	    selectBlock = null;
-	}
+        const [x, y] = getPoint(event);
+        if (selectBlock != null) {
+            // ブロックを掴んでいてマウスポインタが壁と床で囲われている範囲外なら，ブロックを (30,40) にワープ?させて落下させる
+            if ((x < 0) || (x > 60) || (y > 60)) {
+                selectBlock.SetPosition(new b2Vec2(30, 40));
+            }
+            selectBlock.SetAwake(true);
+            selectBlock = null;
+        }
     });
 
     // ゲーム開始
@@ -102,9 +104,9 @@ const setPolygon = (x, y, n) => {
     bodyDef.type = Box2D.Dynamics.b2Body.b2_dynamicBody;
     const points = new Array(n);
     for (let i = 0; i < n ; i++) {
-	const px = n / 2 * Math.cos(i / n * Math.PI * 2);
-	const py = n / 2 * Math.sin(i / n * Math.PI * 2);
-	points[i] = new b2Vec2(px, py);
+        const px = n / 2 * Math.cos(i / n * Math.PI * 2);
+        const py = n / 2 * Math.sin(i / n * Math.PI * 2);
+        points[i] = new b2Vec2(px, py);
     }
     fixDef.shape.SetAsArray(points, n);
     const polygon = world.CreateBody(bodyDef);
@@ -134,30 +136,30 @@ const update = () => {
     context.restore();
     // ブロックの描画
     for (const block of blocks) {
-	const pos = block.obj.GetPosition();
-	context.save();
-	context.translate(pos.x * scale, pos.y * scale);
-	context.rotate(block.obj.GetAngle());
-	let [l, color] = [50, "#000000"];
-	if (block.obj == selectBlock) { [l, color] = [80, "#FF0000"]; }
-	context.fillStyle = `hsl(${(block.n - 3) * 30}, 100%, ${l}%)`;
-	context.strokeStyle = color;
-	context.beginPath();
-	context.moveTo(block.n / 2 * scale, 0);
-	for (let i = 1; i <= block.n; i++) {
-	    const px = block.n / 2 * Math.cos(i / block.n * Math.PI * 2);
-	    const py = block.n / 2 * Math.sin(i / block.n * Math.PI * 2);
-	    context.lineTo(px * scale, py * scale);
-	}
-	context.fill();
-	context.stroke();
-	context.restore();
+        const pos = block.obj.GetPosition();
+        context.save();
+        context.translate(pos.x * scale, pos.y * scale);
+        context.rotate(block.obj.GetAngle());
+        let [l, color] = [50, "#000000"];
+        if (block.obj == selectBlock) { [l, color] = [80, "#FF0000"]; }
+        context.fillStyle = `hsl(${(block.n - 3) * 30}, 100%, ${l}%)`;
+        context.strokeStyle = color;
+        context.beginPath();
+        context.moveTo(block.n / 2 * scale, 0);
+        for (let i = 1; i <= block.n; i++) {
+            const px = block.n / 2 * Math.cos(i / block.n * Math.PI * 2);
+            const py = block.n / 2 * Math.sin(i / block.n * Math.PI * 2);
+            context.lineTo(px * scale, py * scale);
+        }
+        context.fill();
+        context.stroke();
+        context.restore();
     }
     // スコアの表示
     let score = 0;
     for (const block of blocks) {
-	const y = block.obj.GetPosition().y;
-	if ((block.obj != selectBlock) && (y < 35)) { score += block.n; }
+        const y = block.obj.GetPosition().y;
+        if ((block.obj != selectBlock) && (y < 35)) { score += block.n; }
     }
     document.getElementById("score").innerText = score * 100;
 }
