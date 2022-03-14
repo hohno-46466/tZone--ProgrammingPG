@@ -3,7 +3,7 @@
 A test zone for the various programming languages
 
 
-    tZone--Programming
+    ./tZone--Programming
      ├── JavaScript
      │   ├── README.md
      │   ├── WeeklyAscii
@@ -20,8 +20,10 @@ A test zone for the various programming languages
      │       ├── demo.html
      │       └── example.html
      ├── README.md
-     └── SQLite
+     ├── SQLite
+     │   └── README.md
+     └── python
          └── README.md
      
-     6 directories, 12 files (Thu Mar 10 18:21:18 JST 2022)
+     7 directories, 13 files (Mon Mar 14 21:35:05 JST 2022)
 
