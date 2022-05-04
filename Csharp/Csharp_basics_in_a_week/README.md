@@ -1,6 +1,6 @@
-# tZone--ProgrammingPG/Csharp
+# tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week
 
-A test zone for the various programming languages
+A test zone for the various programming languages (public repository)
 
     ./Csharp_basics_in_a_week
      ├── Day1

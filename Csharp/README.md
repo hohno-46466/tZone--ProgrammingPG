@@ -1,6 +1,6 @@
 # tZone--ProgrammingPG/Csharp
 
-A test zone for the various programming languages
+A test zone for the various programming languages (public repository)
 
     ./Csharp
      ├── 1週間でC＃の基礎が学べる本 -> Csharp_basics_in_a_week

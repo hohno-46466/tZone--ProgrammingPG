@@ -3,46 +3,44 @@
 A test zone for the various programming languages (public repository)
 
 
-    ./tZone--Programming
+
+    tZone--ProgrammingPG
+     ├── Csharp
+     │   ├── 1週間でC＃の基礎が学べる本 -> Csharp_basics_in_a_week
+     │   └── Csharp_basics_in_a_week
+     │       ├── Day1
+     │       │   ├── Sample100
+     │       │   └── Sample101
+     │       │       ├── bin
+     │       │       │   └── Debug
+     │       │       │       └── net5.0
+     │       │       │           └── ref
+     │       │       └── obj
+     │       │           └── Debug
+     │       │               └── net5.0
+     │       │                   └── ref
+     │       ├── Day2
+     │       ├── Day3
+     │       ├── Day4
+     │       ├── Day5
+     │       ├── Day6
+     │       └── Day7
      ├── HTML
-     │   ├── Emmet
-     │   │   ├── README.md
-     │   │   └── test01
-     │   │       ├── index-1.html
-     │   │       └── index.html
-     │   └── README.md
+     │   └── Emmet
+     │       └── test01
      ├── JavaScript
-     │   ├── README.md
      │   ├── WeeklyAscii
      │   │   ├── No.1372
      │   │   │   └── Video15Puzzle
-     │   │   │       ├── video_15puzzle.html
-     │   │   │       └── video_15puzzle.js
      │   │   ├── No.1376
      │   │   │   └── BalanceGame
-     │   │   │       ├── Box2D.js
-     │   │   │       ├── balance_game.html
-     │   │   │       └── balance_game.js
      │   │   ├── No.1378
      │   │   │   └── MemorizeMaker
-     │   │   │       ├── memorize_maker.html
-     │   │   │       └── memorize_maker.js
      │   │   └── No.1381
      │   │       └── RoundAudioVisualizer
-     │   │           ├── round_audio_visualizer.html
-     │   │           └── round_audio_visualizer.js
      │   └── box2dweb
-     │       ├── Box2D.js
-     │       ├── Box2d.min.js
-     │       ├── README.md
-     │       ├── demo-google-gadget.xml
-     │       ├── demo.html
-     │       └── example.html
      ├── Python
-     │   └── README.md
-     ├── README.md
      └── SQLite
-         └── README.md
      
-     16 directories, 23 files (Wed May  4 05:19:49 JST 2022)
+     36 directories (Wed May  4 23:39:56 JST 2022)
 
