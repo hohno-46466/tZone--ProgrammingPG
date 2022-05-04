@@ -1,6 +1,6 @@
 # tZone--ProgrammingPG (Programming Playground)
 
-A test zone for the various programming languages
+A test zone for the various programming languages (public repository)
 
 
     ./tZone--Programming

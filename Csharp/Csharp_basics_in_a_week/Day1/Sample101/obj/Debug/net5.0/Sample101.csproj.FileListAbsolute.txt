@@ -1,0 +1,16 @@
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample101/bin/Debug/net5.0/Sample101
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample101/bin/Debug/net5.0/Sample101.deps.json
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample101/bin/Debug/net5.0/Sample101.runtimeconfig.json
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample101/bin/Debug/net5.0/Sample101.runtimeconfig.dev.json
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample101/bin/Debug/net5.0/Sample101.dll
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample101/bin/Debug/net5.0/ref/Sample101.dll
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample101/bin/Debug/net5.0/Sample101.pdb
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample101/obj/Debug/net5.0/Sample101.csproj.AssemblyReference.cache
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample101/obj/Debug/net5.0/Sample101.GeneratedMSBuildEditorConfig.editorconfig
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample101/obj/Debug/net5.0/Sample101.AssemblyInfoInputs.cache
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample101/obj/Debug/net5.0/Sample101.AssemblyInfo.cs
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample101/obj/Debug/net5.0/Sample101.csproj.CoreCompileInputs.cache
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample101/obj/Debug/net5.0/Sample101.dll
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample101/obj/Debug/net5.0/ref/Sample101.dll
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample101/obj/Debug/net5.0/Sample101.pdb
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample101/obj/Debug/net5.0/Sample101.genruntimeconfig.cache
