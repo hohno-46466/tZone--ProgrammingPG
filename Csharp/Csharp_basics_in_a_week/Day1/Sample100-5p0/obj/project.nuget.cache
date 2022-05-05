@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "mX/PX7Nk5d5ZXX7f65BGb56YcwaOewpILXRJHPWKQJty4bKXPodPWRzdPooy+KU6QzMHExsEaaj/xL6yijNnXw==",
+  "dgSpecHash": "DwQBRMn9bFTHgFuSeswZIA/PNb+nUtb8dZJq65EnnhdN+/qw4SOeOzhVhhSNdghQYct0NIkSNAUscXrw+RuuPg==",
   "success": true,
   "projectFilePath": "/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample100-5p0/Sample100-5p0.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/hohno/.nuget/packages/microsoft.netcore.app.ref/5.0.0/microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "/home/hohno/.nuget/packages/microsoft.aspnetcore.app.ref/5.0.0/microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "/home/hohno/.nuget/packages/microsoft.netcore.app.host.linux-x64/5.0.16/microsoft.netcore.app.host.linux-x64.5.0.16.nupkg.sha512"
+  ],
   "logs": []
 }
