@@ -1,8 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+// using System;
+// using System.Collections.Generic;
+// using System.Linq;
+// using System.Text;
+// using System.Threading.Tasks;
 
 namespace Sample101_6p0
 {
@@ -11,6 +11,6 @@ namespace Sample101_6p0
         static void Main(string[] args)
         {
 	    Console.WriteLine("Hello, World!");
-	}
+	    }
     }
 }

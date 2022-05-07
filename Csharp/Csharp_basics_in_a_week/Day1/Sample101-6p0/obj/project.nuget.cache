@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "q64bJmqWyqkvydsNHu1T5tkYAj/xXVr2JiaWPpiSx8sBEdGCCPBfdonA02V1jrUd4oTbyCMawtB9nc9c1st/xg==",
+  "dgSpecHash": "lHA63odgux8VapKZrsYA3SXvYGKwlAI37nFC0+2eln9fnP5H07Y9zlwpWGjr71s2DoRIL7BJVtDcnEP3G/kD0w==",
   "success": true,
-  "projectFilePath": "/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample101-6p0/Sample101-6p0.csproj",
+  "projectFilePath": "\\\\wsl$\\Ubuntu-18.04\\home\\hohno\\GitHub\\tZone--ProgrammingPG\\Csharp\\Csharp_basics_in_a_week\\Day1\\Sample101-6p0\\Sample101-6p0.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

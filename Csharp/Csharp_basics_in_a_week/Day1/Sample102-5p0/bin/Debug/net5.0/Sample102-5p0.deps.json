@@ -1,20 +1,20 @@
 {
   "runtimeTarget": {
-    "name": ".NETCoreApp,Version=v6.0",
+    "name": ".NETCoreApp,Version=v5.0",
     "signature": ""
   },
   "compilationOptions": {},
   "targets": {
-    ".NETCoreApp,Version=v6.0": {
-      "Sample101-6p0/1.0.0": {
+    ".NETCoreApp,Version=v5.0": {
+      "Sample102-5p0/1.0.0": {
         "runtime": {
-          "Sample101-6p0.dll": {}
+          "Sample102-5p0.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Sample101-6p0/1.0.0": {
+    "Sample102-5p0/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
