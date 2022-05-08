@@ -10,7 +10,7 @@ namespace Sample103_6p0
     {
         static void Main(string[] args)
         {
-	    Console.WriteLine("Hello, World!");
+	    Console.WriteLine("Hello, World! 6.0");
 	}
     }
 }

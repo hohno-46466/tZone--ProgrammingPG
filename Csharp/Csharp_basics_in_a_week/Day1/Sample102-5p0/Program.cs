@@ -13,7 +13,7 @@ namespace Sample102_5p0
             Console.Write(123);
             Console.WriteLine(456);
             Console.Write("ABC");
-            Console.WriteLine("DEF");
+            Console.WriteLine("DEF 5.0");
         }
     }
 }
