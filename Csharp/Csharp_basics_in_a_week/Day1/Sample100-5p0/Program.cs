@@ -6,7 +6,7 @@ namespace Sample100_5p0
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello World! 5.0");
         }
     }
 }
