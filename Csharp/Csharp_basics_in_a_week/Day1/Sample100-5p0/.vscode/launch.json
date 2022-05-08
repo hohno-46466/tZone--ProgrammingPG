@@ -1,17 +1,34 @@
 {
+<<<<<<< HEAD
     // IntelliSense を使用して利用可能な属性を学べます。
     // 既存の属性の説明をホバーして表示します。
     // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
+=======
+    "version": "0.2.0",
+    "configurations": [
+        {
+            // Use IntelliSense to find out which attributes exist for C# debugging
+            // Use hover for the description of the existing attributes
+            // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+>>>>>>> 3e3c42ad6eacd57ba71115540ccb10d670944bc5
             "name": ".NET Core Launch (console)",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
+<<<<<<< HEAD
             "program": "${workspaceFolder}/bin/Debug/net5.0/Sample100-5p0.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
+=======
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/bin/Debug/net5.0/Sample100-5p0.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+>>>>>>> 3e3c42ad6eacd57ba71115540ccb10d670944bc5
             "console": "internalConsole",
             "stopAtEntry": false
         },
