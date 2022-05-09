@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample103-5p0/Sample103-5p0.csproj": {}
+    "/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day2/Sample202-5p0/Sample202-5p0.csproj": {}
   },
   "projects": {
-    "/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample103-5p0/Sample103-5p0.csproj": {
+    "/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day2/Sample202-5p0/Sample202-5p0.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample103-5p0/Sample103-5p0.csproj",
-        "projectName": "Sample103-5p0",
-        "projectPath": "/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample103-5p0/Sample103-5p0.csproj",
+        "projectUniqueName": "/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day2/Sample202-5p0/Sample202-5p0.csproj",
+        "projectName": "Sample202-5p0",
+        "projectPath": "/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day2/Sample202-5p0/Sample202-5p0.csproj",
         "packagesPath": "/home/hohno/.nuget/packages/",
-        "outputPath": "/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample103-5p0/obj/",
+        "outputPath": "/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day2/Sample202-5p0/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/hohno/.nuget/NuGet/NuGet.Config"
