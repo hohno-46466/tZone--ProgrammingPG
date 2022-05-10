@@ -5,6 +5,7 @@
 \#*.*
 *.swp
 *.bak
+*.cache
 *~
 */obj/*
 */bin/*
