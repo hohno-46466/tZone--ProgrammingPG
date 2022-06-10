@@ -1,8 +1,6 @@
-# tZone--ProgrammingPG (Programming Playground)
+# tZone--ProgrammingPG (Programming Play Ground)
 
 A test zone for the various programming languages (public repository)
-
-
 
     tZone--ProgrammingPG
      ├── Csharp
