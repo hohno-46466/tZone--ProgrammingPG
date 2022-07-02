@@ -10,7 +10,6 @@
 
 // Last update: Thu Jun 30 17:09:03 JST 2022
 
-
 let canvas, context;
 const [width, height] = [1024, 768]; // [800, 600]; // [500, 600];
 const stars = new Array();
