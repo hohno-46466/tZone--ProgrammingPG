@@ -2,11 +2,17 @@
 // bulletproof_game.js
 // (Written in ES2015(ES6))
 //
-// Last update:
+// Note:
+// This JS file (bulletproof_game.js) and the corresponding HTML file (bulletproof_game.html) refer to the following pages.
+//
+//   Weekly Ascii No.1386 pp.40-45
 //
 
+// Last update: Thu Jun 30 17:09:03 JST 2022
+
+
 let canvas, context;
-const [width, height] = [800, 600]; // [500, 600];
+const [width, height] = [1024, 768]; // [800, 600]; // [500, 600];
 const stars = new Array();
 let points = new Array();
 let shots = new Array();
