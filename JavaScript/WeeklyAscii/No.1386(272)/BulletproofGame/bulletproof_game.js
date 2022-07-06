@@ -129,25 +129,25 @@ const update = () => {
 	    console.log("弾丸を発射");
 	    const [x,y] = [points[i].x, points[i].y];
 	    let angle = 0;
-			if ((time/1000 > 20) && (Math.random() > 0.5)) {
-				// 渦巻
-				for (let j = 0; j < 64; j++) {
-					angle += Math.PI*2 / 18;
-					shots.push(new Shot("shot",x,y,angle,63-j))
-				}
-			} else if ((time/1000 > 10) && (Math.random() > 0.5)) {
-				// 円形
-				for (let j = 0; j < 16; j++) {
-					angle += Math.PI*2 / 16;
-					shots.push(new Shot("shot",x,y,angle));
-				}
-			} else {
-				// ランダムに5個
-				for (let j = 0; j < 5; j++) {
-					angle += Math.PI*2 * Math.random();
-					shots.push(new Shot("shot",x,y,angle))
-				}
-			}
+	    if ((time/1000 > 20) && (Math.random() > 0.5)) {
+		// 渦巻
+		for (let j = 0; j < 64; j++) {
+		    angle += Math.PI*2 / 18;
+		    shots.push(new Shot("shot",x,y,angle,63-j))
+		}
+	    } else if ((time/1000 > 10) && (Math.random() > 0.5)) {
+		// 円形
+		for (let j = 0; j < 16; j++) {
+		    angle += Math.PI*2 / 16;
+		    shots.push(new Shot("shot",x,y,angle));
+		}
+	    } else {
+		// ランダムに5個
+		for (let j = 0; j < 5; j++) {
+		    angle += Math.PI*2 * Math.random();
+		    shots.push(new Shot("shot",x,y,angle))
+		}
+	    }
 	    points.splice(i,1);
 	} else {
 	    points[i].update();
@@ -198,7 +198,7 @@ const drawCircle = (x, y,r,color1,color2 = null) => {
 const drawText = (text,x,y,size,color,align = "center",base = "middle") => {
     // テキストの描画
     context.font = `${size}px Arial Black`;
-    context.textAlign = align;  // 文字の左右の配置
+    context.textAlign = align;   // 文字の左右の配置
     context.textBaseline = base; // 文字の基準線
     context.fillStyle = color;
     context.fillText(text,x,y);
