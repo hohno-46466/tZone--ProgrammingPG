@@ -20,6 +20,9 @@ const [width, height] = [800, 600]; // [500, 600];
 // Set a port of MQTT broker
 let _MQTTport = 8088
 
+// Set a topic name of this MQTT connecton
+let _MQTTtopic = "hohno/test8088"
+
 // Create a client instance
 _client = new Paho.MQTT.Client("localhost", _MQTTport, "clientId");
 
@@ -75,7 +78,7 @@ const update = () => {
 function onConnect() {
     // Once a connection has been made, make a subscription and send a message.
     console.log("onConnect!!");
-    _client.subscribe("hohno/test8088");
+    _client.subscribe(_MQTTtopic);
     _message = new Paho.MQTT.Message("Hello");
     _message.destinationName = "World";
     _client.send(_message);
