@@ -70,8 +70,8 @@ A test zone for the various programming languages (public repository)
      44 directories, 19 files (Mon Aug  8 21:42:52 JST 2022)
 
 
-Note: url = https://github.com/hohno-46466/tZone--ProgrammingPG
+Note: URL = https://github.com/hohno-46466/tZone--ProgrammingPG
 
-Note: url = git@github.com:hohno-46466/tZone--ProgrammingPG.git
+Note: URL = git@github.com:hohno-46466/tZone--ProgrammingPG.git
 
 -EOF-
