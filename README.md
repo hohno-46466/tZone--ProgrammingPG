@@ -2,7 +2,7 @@
 
 A test zone for the various programming languages (public repository)
 
-    ./tZone--ProgrammingPG/
+    ./tZone--ProgrammingPG
      ├──  Csharp/
      │   ├──  1週間でC＃の基礎が学べる本 -> Csharp_basics_in_a_week
      │   ├──  Csharp_basics_in_a_week/
@@ -67,7 +67,7 @@ A test zone for the various programming languages (public repository)
      └──  SQLite/
          └──  README.md
      
-     44 directories, 19 files (Tue Aug 30 13:17:43 JST 2022)
+     44 directories, 19 files (Sat Sep  3 17:32:44 JST 2022)
 
 
 Note: URL = https://github.com/hohno-46466/tZone--ProgrammingPG
