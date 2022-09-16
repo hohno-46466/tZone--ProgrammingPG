@@ -1,3 +1,19 @@
 <<<<<<< HEAD
 =======
 >>>>>>> 3e3c42ad6eacd57ba71115540ccb10d670944bc5
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample100-5p0/bin/Debug/net5.0/Sample100-5p0
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample100-5p0/bin/Debug/net5.0/Sample100-5p0.deps.json
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample100-5p0/bin/Debug/net5.0/Sample100-5p0.runtimeconfig.json
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample100-5p0/bin/Debug/net5.0/Sample100-5p0.runtimeconfig.dev.json
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample100-5p0/bin/Debug/net5.0/Sample100-5p0.dll
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample100-5p0/bin/Debug/net5.0/Sample100-5p0.pdb
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample100-5p0/obj/Debug/net5.0/Sample100-5p0.csproj.AssemblyReference.cache
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample100-5p0/obj/Debug/net5.0/Sample100-5p0.GeneratedMSBuildEditorConfig.editorconfig
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample100-5p0/obj/Debug/net5.0/Sample100-5p0.AssemblyInfoInputs.cache
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample100-5p0/obj/Debug/net5.0/Sample100-5p0.AssemblyInfo.cs
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample100-5p0/obj/Debug/net5.0/Sample100-5p0.csproj.CoreCompileInputs.cache
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample100-5p0/obj/Debug/net5.0/Sample100-5p0.dll
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample100-5p0/obj/Debug/net5.0/refint/Sample100-5p0.dll
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample100-5p0/obj/Debug/net5.0/Sample100-5p0.pdb
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample100-5p0/obj/Debug/net5.0/Sample100-5p0.genruntimeconfig.cache
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample100-5p0/obj/Debug/net5.0/ref/Sample100-5p0.dll

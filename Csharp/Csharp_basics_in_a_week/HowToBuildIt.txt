@@ -1,0 +1,29 @@
+
+# How to build the program
+
+# Last update: Thu Sep 15 21:18:49 JST 2022
+
+・作成
+　　（.NET 5 の場合）
+　　$ cd /path/to
+　　$ dotnet new console --framework net5.0 -o Sample00-5p0
+　　# ディレクトリ Sample00-5p0 が作られその中に .NET 5 を前提としたファイルがあれこれ作られる
+　　$ cd /path/to/Sample00-5p0
+　　$ dotnet run
+
+　　（.NET 6 の場合）
+　　$ cd /path/to
+　　$ dotnet new console --framework net6.0 -o Sample00-6p0
+　　# ディレクトリ Sample00-6p0 が作られその中に .NET 6 を前提としたファイルがあれこれ作られる
+
+・編集
+　・Program.cs を編集
+
+・実行
+　　（.NET 5 / .NET 6 共通）
+　　$ cd /path/to//Sample00-5p0 # or cd /path/to/Sample00-6p0
+　　$ dotnet run
+　　# Program.cs が ビルドされる．
+　　# dotnet new した段階でフレームワークを指定しているのでビルドする際は dotnet run とすれば指定したフレームワークでビルドが進行する
+
+-EOF-
