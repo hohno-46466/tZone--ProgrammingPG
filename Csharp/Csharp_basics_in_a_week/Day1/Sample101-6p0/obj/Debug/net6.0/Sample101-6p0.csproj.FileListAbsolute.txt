@@ -13,3 +13,8 @@
 //wsl$/Ubuntu-18.04/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample101-6p0/obj/Debug/net6.0/Sample101-6p0.pdb
 //wsl$/Ubuntu-18.04/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample101-6p0/obj/Debug/net6.0/Sample101-6p0.genruntimeconfig.cache
 //wsl$/Ubuntu-18.04/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample101-6p0/obj/Debug/net6.0/ref/Sample101-6p0.dll
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample101-6p0/obj/Debug/net6.0/Sample101-6p0.csproj.AssemblyReference.cache
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample101-6p0/obj/Debug/net6.0/Sample101-6p0.GeneratedMSBuildEditorConfig.editorconfig
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample101-6p0/obj/Debug/net6.0/Sample101-6p0.AssemblyInfoInputs.cache
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample101-6p0/obj/Debug/net6.0/Sample101-6p0.AssemblyInfo.cs
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample101-6p0/obj/Debug/net6.0/Sample101-6p0.csproj.CoreCompileInputs.cache
