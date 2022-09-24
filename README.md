@@ -13,6 +13,7 @@ A test zone for the various programming languages (public repository)
      │   │   ├──  Day5/
      │   │   ├──  Day6/
      │   │   ├──  Day7/
+     │   │   ├──  HowToBuildIt.txt
      │   │   └──  README.md
      │   ├──  MQTT/
      │   │   └──  workspace/
@@ -67,7 +68,7 @@ A test zone for the various programming languages (public repository)
      └──  SQLite/
          └──  README.md
      
-     44 directories, 19 files (Fri Sep  9 06:46:38 JST 2022)
+     44 directories, 20 files (Sat Sep 24 17:45:53 JST 2022)
 
 
 Note: URL = https://github.com/hohno-46466/tZone--ProgrammingPG
