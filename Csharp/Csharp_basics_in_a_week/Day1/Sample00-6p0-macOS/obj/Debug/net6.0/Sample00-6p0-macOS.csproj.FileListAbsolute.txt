@@ -1,0 +1,15 @@
+/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample00-6p0-macOS/bin/Debug/net6.0/Sample00-6p0-macOS
+/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample00-6p0-macOS/bin/Debug/net6.0/Sample00-6p0-macOS.deps.json
+/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample00-6p0-macOS/bin/Debug/net6.0/Sample00-6p0-macOS.runtimeconfig.json
+/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample00-6p0-macOS/bin/Debug/net6.0/Sample00-6p0-macOS.dll
+/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample00-6p0-macOS/bin/Debug/net6.0/ref/Sample00-6p0-macOS.dll
+/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample00-6p0-macOS/bin/Debug/net6.0/Sample00-6p0-macOS.pdb
+/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample00-6p0-macOS/obj/Debug/net6.0/Sample00-6p0-macOS.csproj.AssemblyReference.cache
+/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample00-6p0-macOS/obj/Debug/net6.0/Sample00-6p0-macOS.GeneratedMSBuildEditorConfig.editorconfig
+/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample00-6p0-macOS/obj/Debug/net6.0/Sample00-6p0-macOS.AssemblyInfoInputs.cache
+/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample00-6p0-macOS/obj/Debug/net6.0/Sample00-6p0-macOS.AssemblyInfo.cs
+/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample00-6p0-macOS/obj/Debug/net6.0/Sample00-6p0-macOS.csproj.CoreCompileInputs.cache
+/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample00-6p0-macOS/obj/Debug/net6.0/Sample00-6p0-macOS.dll
+/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample00-6p0-macOS/obj/Debug/net6.0/ref/Sample00-6p0-macOS.dll
+/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample00-6p0-macOS/obj/Debug/net6.0/Sample00-6p0-macOS.pdb
+/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample00-6p0-macOS/obj/Debug/net6.0/Sample00-6p0-macOS.genruntimeconfig.cache

@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "/home/hohno/.nuget/packages/": {}
+    "/Users/hohno/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample102-6p0/Sample102-6p0.csproj",
+      "projectUniqueName": "/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample102-6p0/Sample102-6p0.csproj",
       "projectName": "Sample102-6p0",
-      "projectPath": "/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample102-6p0/Sample102-6p0.csproj",
-      "packagesPath": "/home/hohno/.nuget/packages/",
-      "outputPath": "/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample102-6p0/obj/",
+      "projectPath": "/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample102-6p0/Sample102-6p0.csproj",
+      "packagesPath": "/Users/hohno/.nuget/packages/",
+      "outputPath": "/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day1/Sample102-6p0/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/hohno/.nuget/NuGet/NuGet.Config"
+        "/Users/hohno/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -58,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/6.0.104_1/libexec/sdk/6.0.104/RuntimeIdentifierGraph.json"
       }
     }
   }
