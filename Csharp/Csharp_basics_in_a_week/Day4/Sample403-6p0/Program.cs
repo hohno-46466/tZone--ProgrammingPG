@@ -13,6 +13,7 @@ namespace Sample403
     {
 	static void Main(string[] args)
 	{
+	    Console.WriteLine("Hello, World! (Sample403-6p0)");
 	}
     }
 }
