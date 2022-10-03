@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sample403
+namespace Sample404
 {
     class Program
     {
-	static void Main(string[] args)
-	{
-	    Console.WriteLine("Hello, World! (Sample404-6p0)");
-	}
+		static void Main(string[] args)
+		{
+	    	Console.WriteLine("Hello, World! (Sample404-6p0)");
+		}
     }
 }
