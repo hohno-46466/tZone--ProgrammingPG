@@ -13,6 +13,7 @@ namespace Sample401
     {
 	static void Main(string[] args)
 	{
+	    Console.WriteLine("Hello, World! (Sample401-6p0)");
 	    Person p1,p2;
 	    p1 = new Person();
 	    p2 = new Person();

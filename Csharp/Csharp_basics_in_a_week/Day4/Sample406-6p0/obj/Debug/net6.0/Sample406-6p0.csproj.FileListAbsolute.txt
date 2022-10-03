@@ -1,0 +1,15 @@
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day4/Sample406-6p0/bin/Debug/net6.0/Sample406-6p0
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day4/Sample406-6p0/bin/Debug/net6.0/Sample406-6p0.deps.json
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day4/Sample406-6p0/bin/Debug/net6.0/Sample406-6p0.runtimeconfig.json
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day4/Sample406-6p0/bin/Debug/net6.0/Sample406-6p0.dll
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day4/Sample406-6p0/bin/Debug/net6.0/Sample406-6p0.pdb
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day4/Sample406-6p0/obj/Debug/net6.0/Sample406-6p0.csproj.AssemblyReference.cache
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day4/Sample406-6p0/obj/Debug/net6.0/Sample406-6p0.GeneratedMSBuildEditorConfig.editorconfig
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day4/Sample406-6p0/obj/Debug/net6.0/Sample406-6p0.AssemblyInfoInputs.cache
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day4/Sample406-6p0/obj/Debug/net6.0/Sample406-6p0.AssemblyInfo.cs
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day4/Sample406-6p0/obj/Debug/net6.0/Sample406-6p0.csproj.CoreCompileInputs.cache
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day4/Sample406-6p0/obj/Debug/net6.0/Sample406-6p0.dll
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day4/Sample406-6p0/obj/Debug/net6.0/refint/Sample406-6p0.dll
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day4/Sample406-6p0/obj/Debug/net6.0/Sample406-6p0.pdb
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day4/Sample406-6p0/obj/Debug/net6.0/Sample406-6p0.genruntimeconfig.cache
+/home/hohno/GitHub/tZone--ProgrammingPG/Csharp/Csharp_basics_in_a_week/Day4/Sample406-6p0/obj/Debug/net6.0/ref/Sample406-6p0.dll
