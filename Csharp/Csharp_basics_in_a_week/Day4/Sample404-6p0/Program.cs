@@ -14,6 +14,12 @@ namespace Sample404
 	static void Main(string[] args)
 	{
 	    Console.WriteLine("Hello, World! (Sample404-6p0)");
+	    Access a = new Access();
+	    // a.Data1 = 2;
+	    a.Data2 = 2;
+	    a.ShowData();
+	    Console.WriteLine("a.data1 = {0}", a.Data1);
+	    // Console.WRiteLine("a.data2 = {0}", a.Data2);
 	}
     }
 }
