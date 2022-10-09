@@ -6,7 +6,7 @@ namespace Sample202_5p0
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World! 202 / 5.0");
+            Console.WriteLine("Hello World! 202/5.0");
             int a;
             int b = 3;
             int add, sub;

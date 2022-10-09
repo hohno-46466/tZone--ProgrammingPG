@@ -10,7 +10,7 @@ namespace Sample205_5p0
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello,Sample205_5p0!");
+            Console.WriteLine("Hello, Sample205_5p0!");
 
 	    string str1, str2;
 	    Console.Write("str1=");
