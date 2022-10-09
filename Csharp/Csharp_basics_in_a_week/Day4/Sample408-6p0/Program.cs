@@ -14,6 +14,8 @@ namespace Sample408
 	static void Main(string[] args)
 	{
 	    Console.WriteLine("Hello, World! (Sample408-6p0)");
+	    //
+	    Dummy d = new Dummy();
 	}
     }
 }
