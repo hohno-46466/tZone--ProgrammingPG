@@ -14,6 +14,7 @@ namespace Sample600_6p0
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World! 6.0 (Sample600_6p0 (using 5.0 style))");
+	    //
         }
     }
 }

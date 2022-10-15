@@ -13,7 +13,7 @@ namespace Sample601_6p0
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World! 6.0 (Sample601_6p0 (using 5.0 style))");
+            Console.WriteLine("Hello World! 6.0 (Sample602_6p0 (using 5.0 style))");
 	    //
 	    List<String> a = new List<String>();
 	    a.Add("Taro");
