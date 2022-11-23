@@ -1,6 +1,6 @@
 # How to build the program
 
-# Last update: Thu Sep 15 21:18:49 JST 2022
+# Last updated: Thu Sep 15 21:18:49 JST 2022
 
 ・作成
 　　（.NET 5 の場合）

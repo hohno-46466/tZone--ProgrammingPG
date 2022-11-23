@@ -7,7 +7,7 @@
 // * Weekly Ascii No.1xxx pp.yy-zz
 //
 
-// Last update:
+// Last updated:
 
 let canvas, context;
 let _counter1 = 0, _counter2 = 0;

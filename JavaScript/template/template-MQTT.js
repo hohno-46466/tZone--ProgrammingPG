@@ -9,7 +9,7 @@
 // MQTT subscriber function using Paho has been added by @hohno_at_kuimc
 //
 
-// Last update:
+// Last updated:
 
 let canvas, context;
 let _counter1 = 0, _counter2 = 0;

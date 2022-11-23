@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "/home/hohno/.dotnet/store/|arch|/|tfm|",
-      "/home/hohno/.nuget/packages"
+      "/Users/hohno/.dotnet/store/|arch|/|tfm|",
+      "/Users/hohno/.nuget/packages"
     ]
   }
 }
