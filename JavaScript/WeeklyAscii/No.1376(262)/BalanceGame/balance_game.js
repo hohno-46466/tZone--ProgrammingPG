@@ -2,7 +2,7 @@
 // balance_game.js
 // (Written in ES2015(ES6))
 //
-// Last updated: Tue Mar  8 18:04:43 JST 2022
+// Last update: Tue Mar  8 18:04:43 JST 2022
 //
 
 let canvas, context, world;                     // キャンバス，物理ワールド
