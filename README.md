@@ -2,7 +2,7 @@
 
 A test zone for the various programming languages (public repository)
 
-     ./tZone--ProgrammingPG
+    ./tZone--ProgrammingPG
      ├──  Csharp/
      │   ├──  1週間でC＃の基礎が学べる本 -> Csharp_basics_in_a_week
      │   ├──  Csharp_basics_in_a_week/
@@ -14,6 +14,7 @@ A test zone for the various programming languages (public repository)
      │   │   ├──  Day6/
      │   │   ├──  Day7/
      │   │   ├──  HowToBuildIt.txt
+     │   │   ├──  HowToBuildIt.txt.bak
      │   │   └──  README.md
      │   ├──  MQTT/
      │   │   └──  workspace/
@@ -58,9 +59,12 @@ A test zone for the various programming languages (public repository)
      │   │   └──  example.html
      │   └──  template/
      │       ├──  template-MQTT.html
+     │       ├──  template-MQTT.html.bak
      │       ├──  template-MQTT.js
+     │       ├──  template-MQTT.js.bak
      │       ├──  template.html
-     │       └──  template.js
+     │       ├──  template.js
+     │       └──  template.js.bak
      ├──  Python/
      │   └──  README.md
      ├──  README.md
@@ -68,7 +72,7 @@ A test zone for the various programming languages (public repository)
      └──  SQLite/
          └──  README.md
      
-     44 directories, 20 files (Wed Dec 21 18:50:55 JST 2022)
+     44 directories, 24 files (Thu Dec 22 04:09:40 JST 2022)
 
 
 Note: URL = https://github.com/hohno-46466/tZone--ProgrammingPG
