@@ -26,14 +26,17 @@ function showClock() {
     var _nowMin   = setZero2(_nowTime.getMinutes());
     var _nowSec   = setZero2(_nowTime.getSeconds());
     var _nowMsec  = setZero3(_nowTime.getMilliseconds());
-    var mesg2 = _nowHour + ":" + _nowMin + ":" + _nowSec + "." + _nowMsec;
+    // var mesg2 = _nowHour + ":" + _nowMin + ":" + _nowSec + "." + _nowMsec;
+    var mesg2 = _nowHour + ":" + _nowMin + ":" + _nowSec;
+    var mesg3 = "." + _nowMsec;
     document.getElementById("RealtimeClockDisplayArea").innerHTML = "現在時刻：" + mesg1 + " " + mesg2;
     // myDate.innerHTML = mesg1;
     // myTime.innerHTML = mesg2;
     // console.log(mesg1);
     // console.log(mesg2);
     document.querySelector(".clock-date").innerText = mesg1;
-    document.querySelector(".clock-time").innerText = mesg2;
+    document.querySelector(".clock-time1").innerText = mesg2;
+    document.querySelector(".clock-time2").innerText = mesg3;
 }
 
 function startClock() {
@@ -68,10 +71,6 @@ function syncTime() {
 }
 
 var interval;
-
-// var message = document.getElementById("RealtimeClockDisplayArea");
-// var myDate = document.getElementsByClassName(".clock-date");
-// var myTime = document.getElementsByClassName(".clock-time");
 var button = document.getElementById("button");
 button.addEventListener('mousedown', mouseDown);
 button.addEventListener('mouseup', mouseUp);

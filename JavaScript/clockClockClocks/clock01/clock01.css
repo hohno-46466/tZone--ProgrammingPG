@@ -10,6 +10,23 @@ body{
 }
 */
 
+.triangle-container {
+    position: relative;
+    height: 200px;
+}
+
+.triangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 100px 100px 0 100px; /* 三角形の形状を指定 */
+    border-color: #000 transparent transparent transparent; /* 三角形の色を指定 */
+    transform-origin: center bottom; /* 回転の基準点を中央の下に設定 */
+}
+
 .container {
   width: 100%;
   height: 100vh;
@@ -24,23 +41,31 @@ body{
     font-family: 'Share Tech Mono', monospace;
     color: #daf6ff;
     text-shadow: 0 0 20px #0aafe6;
-    line-height: 1.2;
+    line-height: 1.0; // line-height: 1.2;
     text-align: center;
 }
 
 .clock-date {
-    font-size: 25px;
+    // font-size: 25px;
+    font-size: 60px;
 }
 
-.clock-time {
+.clock-time1 {
     font-size: 100px
+}
+
+.clock-time2 {
+    font-size: 50px
 }
 
 @media screen and (max-width: 500px) {
     .clock-date {
         font-size: 5vw;
     }
-    .clock-time {
+    .clock-time1 {
         font-size: 20vw;
+    }
+    .clock-time2 {
+        font-size: 10vw;
     }
 }
