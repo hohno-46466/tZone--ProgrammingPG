@@ -6,23 +6,11 @@ Reference(s)
 <head>
     <meta charset="UTF-8">
     <title>Clock01</title>
+    <link rel="stylesheet" href="clock01.css">
 </head>
 <body>
-    <p id="RealtimeClockArea">あいうえお</p>
+    <input type="button" value="Push and Release to Sync" id="button">
+    <p id="RealtimeClockDisplayArea">（ここに時刻情報を表示）</p>
     <script src="clock01.js"></script>
-    <!--
-    <script>alert("Hello, World!");</script>
-
-    <script>    
-    var nowTime = new Date();
-    var nowHour = nowTime.getHours();
-    var nowMin  = nowTime.getMinutes();
-    var nowSec  = nowTime.getSeconds();
-    var mesg = "現在時刻："　+ nowHour + ":" + nowMin + ":" + nowSec;
-    document.getElementById("RealtimeClockArea").innerHTML = mesg;
-    </script>
-    -->
-
 </body>
 </html>
-
