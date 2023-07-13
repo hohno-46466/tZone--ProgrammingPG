@@ -57,6 +57,9 @@ A test zone for the various programming languages (public repository)
      │   │   ├──  demo-google-gadget.xml
      │   │   ├──  demo.html
      │   │   └──  example.html
+     │   ├──  clockClockClocks/
+     │   │   ├──  README.md
+     │   │   └──  clock01/
      │   └──  template/
      │       ├──  template-MQTT.html
      │       ├──  template-MQTT.html.bak
@@ -72,7 +75,7 @@ A test zone for the various programming languages (public repository)
      └──  SQLite/
          └──  README.md
      
-     45 directories, 24 files (Wed Jul 12 05:08:30 JST 2023)
+     47 directories, 25 files (Thu Jul 13 19:56:57 JST 2023)
 
 
 Note: URL = https://github.com/hohno-46466/tZone--ProgrammingPG

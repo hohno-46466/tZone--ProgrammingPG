@@ -1,3 +1,7 @@
+// clock01.js
+
+// Last update: Thu Jul 13 21:38:56 JST 2023
+
 function setZero2(x){
     var ret;
     ret = x;
@@ -13,13 +17,23 @@ function setZero3(x){
 }
 
 function showClock() {
-    var _nowTime = new Date();
-    var _nowHour = setZero2(_nowTime.getHours());
-    var _nowMin  = setZero2(_nowTime.getMinutes());
-    var _nowSec  = setZero2(_nowTime.getSeconds());
-    var _nowMsec = setZero3(_nowTime.getMilliseconds());
-    var mesg = "現在時刻："　+ _nowHour + ":" + _nowMin + ":" + _nowSec + "." + _nowMsec;
-    message.innerHTML = mesg;
+    var _nowTime  = new Date();
+    var _nowYear  = setZero2(_nowTime.getFullYear());
+    var _nowMonth = setZero2(_nowTime.getMonth());
+    var _nowdate  = setZero2(_nowTime.getDate());
+    var mesg1 = _nowYear + "-" + _nowMonth + "-" + _nowdate;
+    var _nowHour  = setZero2(_nowTime.getHours());
+    var _nowMin   = setZero2(_nowTime.getMinutes());
+    var _nowSec   = setZero2(_nowTime.getSeconds());
+    var _nowMsec  = setZero3(_nowTime.getMilliseconds());
+    var mesg2 = _nowHour + ":" + _nowMin + ":" + _nowSec + "." + _nowMsec;
+    document.getElementById("RealtimeClockDisplayArea").innerHTML = "現在時刻：" + mesg1 + " " + mesg2;
+    // myDate.innerHTML = mesg1;
+    // myTime.innerHTML = mesg2;
+    // console.log(mesg1);
+    // console.log(mesg2);
+    document.querySelector(".clock-date").innerText = mesg1;
+    document.querySelector(".clock-time").innerText = mesg2;
 }
 
 function startClock() {
@@ -54,7 +68,10 @@ function syncTime() {
 }
 
 var interval;
-var message = document.getElementById("RealtimeClockDisplayArea");
+
+// var message = document.getElementById("RealtimeClockDisplayArea");
+// var myDate = document.getElementsByClassName(".clock-date");
+// var myTime = document.getElementsByClassName(".clock-time");
 var button = document.getElementById("button");
 button.addEventListener('mousedown', mouseDown);
 button.addEventListener('mouseup', mouseUp);
