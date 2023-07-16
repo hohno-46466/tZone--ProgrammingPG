@@ -50,7 +50,7 @@ body{
     font-size: 60px;
 }
 
-.clock-time1 {
+.clock-time {
     font-size: 100px
 }
 
@@ -58,14 +58,21 @@ body{
     font-size: 50px
 }
 
+span {
+    font-size: 50px
+}
+
 @media screen and (max-width: 500px) {
     .clock-date {
         font-size: 5vw;
     }
-    .clock-time1 {
+    .clock-time {
         font-size: 20vw;
     }
     .clock-time2 {
+        font-size: 10vw;
+    }
+    span {
         font-size: 10vw;
     }
 }

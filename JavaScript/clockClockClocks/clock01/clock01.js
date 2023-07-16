@@ -35,7 +35,7 @@ function showClock() {
     // console.log(mesg1);
     // console.log(mesg2);
     document.querySelector(".clock-date").innerText = mesg1;
-    document.querySelector(".clock-time1").innerText = mesg2;
+    document.querySelector(".clock-time").innerText = mesg2;
     document.querySelector(".clock-time2").innerText = mesg3;
 }
 
