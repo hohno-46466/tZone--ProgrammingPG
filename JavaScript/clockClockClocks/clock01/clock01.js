@@ -160,7 +160,7 @@ function syncTime() {
 
 function startClock() {
     intervalID = setInterval('showClock()', 1000)
-    console.log("Let's by startClock()")
+    console.log("Let's go by startClock()")
 }
 
 // -----------------------------------------------------------------------------
