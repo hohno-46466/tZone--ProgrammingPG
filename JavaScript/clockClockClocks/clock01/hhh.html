@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // document.body.innerHTML = ''
+    var consout = 'MQTT over WebSockets Test'+'<br>'
+    document.body.innerHTML = consout
+    
+    // var mqtt = require('mqtt')
+    // var client = mqtt.connect('ws://test.mosquitto.org:8081')
+    var client = mqtt.connect('ws://broker.hivemq.com:8000/mqtt')
+    var offset = 0.0
+
+    // subscribe Topic
+    client.subscribe('hohno/wstest01')
+    
+    client.on('message', function(topic, payload) {
+        var _text = payload.toString()
+        var _words = _text.split('='); //(/[ \t]/)
+        var _key = _words[0].trim()
+        var _val = _words[1];
+        if (_key == "offset") {
+            offset = _val.trim().split(' ')[0]
+        }
+        _mesg = "key=[" + _key + "] val=[" + _val + "] -> offset=[" + offset + "]"
+        console.log(_mesg)
+        consout += (_mesg + '<br>')
+        document.body.innerHTML = consout
+        // disconnect
+        //client.end();
+    });
+    
+    // publish messages
+    client.publish('hohno/wstest01', 'hello world of MQTT! #1');
+    client.publish('hohno/wstest01', 'hello world of MQTT! #2');
+    
+</script> 
+</body>
+</html>
