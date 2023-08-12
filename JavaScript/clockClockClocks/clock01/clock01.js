@@ -10,6 +10,25 @@
 // https://www.nishishi.com/javascript-tips/realtime-clock-setinterval.html   
 // https://web-dev.tech/front-end/javascript/digital-clock/
 
+
+// -----------------------------------------------------------------------------
+
+//
+// We can set NTPoffset by using MQTT over websocket
+//
+// message format: "offset = value" 
+//
+// The value is the number of seconds expressed in fixed-point format
+// The value must be negative if the result of ntpdate is negative.
+//
+//  $ ntpdate -q -d ntp.nict.jp 2> /dev/null            |
+//    egrep 'adjust time server'                        |
+//    tail -1                                           |        
+//    sed -e 's/^.*offset //'                           |
+//    awk '{printf "offset = %5.3f\n", $1; fflush()}'   |
+//    mosquitto_pub -l -t hohno/wstest01 -h broker.hivemq.com
+//
+
 // -----------------------------------------------------------------------------
 
 const WSURL = 'ws://broker.hivemq.com:8000/mqtt'
@@ -141,7 +160,7 @@ function syncTime() {
 
 function startClock() {
     intervalID = setInterval('showClock()', 1000)
-    console.log("Go bu startClock()")
+    console.log("Let's by startClock()")
 }
 
 // -----------------------------------------------------------------------------
@@ -154,18 +173,6 @@ var client = mqtt.connect(WSURL)
 client.subscribe(MQTTtopic) // subscribe Topic
 
 client.on('message', function(topic, payload) {
-        //
-        // messageformat is "offset = value" 
-        // value is in sec 
-        // The value must be negative if the result of ntpdate is negative.
-        //
-        //  $ ntpdate -q -d ntp.nict.jp 2> /dev/null            |
-        //    egrep 'adjust time server'                        |
-        //    tail -1                                           |        
-        //    sed -e 's/^.*offset //'                           |
-        //    awk '{printf "offset = %5.3f\n", $1; fflush()}'   |
-        //    mosquitto_pub -l -t hohno/wstest01 -h broker.hivemq.com
-        //
         var _text = payload.toString()
         var _words = _text.split('=') //(/[ \t]/)
         var _key = _words[0].trim()
