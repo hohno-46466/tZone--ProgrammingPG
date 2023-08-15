@@ -11,7 +11,7 @@ TOPIC="hohno/TS1"
 
 z=0
 p=0
-i=30
+i=180
 
 while [ 1 ] ; do
   read v1 v2

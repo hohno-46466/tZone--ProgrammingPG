@@ -65,7 +65,6 @@ function setZero3(x) {
 
 function showClock() {
     var _Time0  = Date.now()
-    // _Time0 += ntpOffset
     var _nowTime  = new Date(_Time0 + (ntpOffset * 1000)) ; // Date(_nowMillisec)
     var _dow3 = new Array("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat")
 
