@@ -27,7 +27,9 @@ while [ 1 ] ; do
     else
       /bin/echo "*B*" 1>&2
       p=$q
-      # z=1.123;
+      #
+      # Note: If value of z is negative, the local clock is ahead of UTC; if positive, it is behind.
+      #
       z=$(ntpdate -q "$NTPSERVER" 2> /dev/null 	|
           egrep -u 'time server'		| 
           tail -1 				|
