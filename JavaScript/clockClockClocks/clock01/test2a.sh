@@ -2,11 +2,11 @@
 
 # Last update Tue Aug 15 17:32:57 JST 2023
 
-# example: mosquitto_sub -t $TOPIC -h $BROKER | sh ./test2a.sh
+TOPIC=${1:-"hohno/TS1"}
+BROKER=${2:-"broker.hivemq.com"}
+NTPSERVER=${3:-"ntp.nict.jp"}
 
-NTPSERVER="ntp.nict.jp"
-BROKER="broker.hivemq.com"
-TOPIC="hohno/TS1"
+# example: mosquitto_sub -t $TOPIC -h $BROKER | sh ./test2a.sh
 
 echo "#KEYWORD          0              0      0                 0              0      --   T2-T1   T4-T3   T3-T2   tDiff   tDiff+NTPoffset"
 while [ 1 ] ; do
