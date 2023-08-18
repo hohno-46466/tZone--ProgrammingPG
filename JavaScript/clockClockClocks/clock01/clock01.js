@@ -21,7 +21,7 @@
 // The value is the number of seconds expressed in fixed-point format
 // The value must be negative if the result of ntpdate is negative.
 //
-//  $ ntpdate -q -d ntp.nict.jp 2> /dev/null            |
+//  $ ntpdate -q ntp.nict.jp 2> /dev/null               |
 //    egrep 'adjust time server'                        |
 //    tail -1                                           |        
 //    sed -e 's/^.*offset //'                           |
