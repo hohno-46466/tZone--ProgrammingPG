@@ -9,7 +9,7 @@ NTPSERVER=${3:-"ntp.nict.jp"}
 
 # example: mosquitto_sub -t $TOPIC -h $BROKER | sh ./test2a.sh
 
-MESG="#KEYWORD         T4             T2     NTPoffset         T3             T4      --   T2-T1   T4-T3   T3-T2 NTPoffset tDiff  tDiff+NTPoffset"
+MESG="#KEYWORD         T1             T2     NTPoffset         T3             T4      --   T2-T1   T4-T3   T3-T2 NTPoffset tDiff  tDiff+NTPoffset"
 
 echo "$MESG"
 CNT=0
