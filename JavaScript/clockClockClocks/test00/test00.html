@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lagn="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/mqtt/dist/00mqtt.min.js"></script>
+    <script>
+      // CDN からの読み込みが失敗した場合にローカルのファイルを読み込む
+      if (typeof mqtt === 'undefined') {
+        var script = document.createElement('script');
+        script.src = 'mqtt.min.js'; // あなたのローカルの mqtt.min.js へのパス
+        document.head.appendChild(script);
+        console.log("an alternative mqtt.min.js has been invoked.");
+      }
+    </script>
+    <title>Clock01</title>
+    <link rel="stylesheet" href="test00.css">
+</head>
+<body>
+    <p id="DisplayArea">（ここに情報を表示）</p>
+    <script src="test00.js"></script>
+</body>
+</html>
