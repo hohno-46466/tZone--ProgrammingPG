@@ -1,0 +1,224 @@
+//
+// template.js
+// (Written in ES2015(ES6))
+//
+// Note:
+// This JS file (template.js) and the corresponding HTML file (template.html) refer to the following pages.
+// * Weekly Ascii No.1xxx pp.yy-zz
+//
+
+// Last update:
+
+let canvas, context;
+let masu, blocks;
+let startTime, score, status;
+let target = null, offset;
+let _debugCnt = 0;
+
+const code = [  "0x1F347", "0x1F348", "0x1F349", "0x1F34A", "0x1F34D", "0x1F352", "0x1F95D" ];
+
+// let _counter1 = 0, _counter2 = 0;
+// const [width, height] = [800, 600]; // [500, 600];
+
+// ---------------------------------------------------------
+
+class Block {
+    constructor(x) {
+        this.x = x * 80;
+        this.y = -80;
+        this.mx = x;
+        this.my = -1;
+        this.type = Math.floor(Math.random() * code.length);
+        this.status = "fall";
+        masu[this.mx][0] = -1;
+    }
+    
+    fall() {
+        this.y += 8;
+        if (Math.floor(this.y/80) == this.my + 1) {
+            if (this.my > -1) {
+                masu[this.mx][this.my] = null
+            }
+            this.my++;
+            masu[this.mx][this.my] = this;
+        }
+    }
+
+    draw() {
+        [ context.fillStyle, context.font] = [ "#000000", "50px sans-serif" ];
+        [ context.textAlign, context.textBaseline ] = ["center", "middle"];
+        const text = String.fromCodePoint(code[this.type]);
+        context.fillText(text, this.x+40, this.y+40);
+    }
+}
+
+const init = () => {
+    // キャンバスの取得
+    canvas = document.getElementById("myCanvas");  // キャンバスの取得
+    context = canvas.getContext("2d");
+    // [canvas.width,canvas.height] = [width,height]; // キャンバスのサイズを設定
+
+    // mouse down
+    canvas.addEventListener("mousedown", event => {
+        [ x, y ] = [ Math.floor(event.offsetX/80), Math.floor(event.offsetY/80) ];
+        if (status == "ready") {
+            target = masu[x][y];
+            offset = { x:event.offsetX - target.x, y:event.offsetY - target.y }
+        }
+    });
+
+    // mouse move
+    canvas.addEventListener("mousemove", event => {
+        [ x, y ] = [ Math.floor(event.offsetX/80), Math.floor(event.offsetY/80) ];
+        if ((status == "ready") && (target != null)) {
+            if ((Math.abs(target.mx - x) == 1) && (target.my == y)) {
+                target.x = event.offsetX - offset.x;
+            } else if ((Math.abs(target.my - y) == 1) && (target.mx == x)) {
+                target.y = event.offsetY - offset.y;
+            }
+        }
+    });
+
+    // mouse up
+    canvas.addEventListener("mouseup", event => {
+        [ x, y ] = [ Math.floor(event.offsetX/80), Math.floor(event.offsetY/80) ];
+
+        if ((status == "ready") && (target != null)) {            
+            if (((Math.abs(target.mx - x) == 1) && (target.my == y))
+             || ((Math.abs(target.my - y) == 1) && (target.mx == x)) ) {
+                const [b1, b2] = [ masu[x][y], masu[target.mx][target.my]];
+                [b1.type, b2.type] = [b2.type, b1.type];
+                if (!checkMatch()) {
+                    [ b1.type, b2.type ] = [ b2.type, b1.type ];
+                }
+            }
+            [ target.x, target.y ] = [ target.mx * 80, target.my * 80] ;
+            target = null;
+        }            
+    });
+    
+
+    // mouse leave
+    canvas.addEventListener("mouseleave", event => {
+        if (target != null) {
+            [ target.x, target.y ] = [target.mx * 80, target.my * 80];
+            target = null;
+        }
+    });
+
+    initGame();
+    update();
+}
+
+
+const initGame = () => {
+    [ masu, blocks ] = [ [], [] ];
+    for (let x = 0; x < 8; x++) {
+        masu[x] = new Array(8).fill(null);
+    }
+    [startTime, score, status, target ] = [ null, 0, "fall", null];
+}
+
+
+const match3Blocks = (x1, y1, x2, y2, x3, y3) => {
+    let match = false;
+    const [ b1, b2, b3 ] = [ masu[x1][y1], masu[x2][y2], masu[x3][y3] ];
+    if ((b1.type == b2.type) && (b2.type == b3.type)) {
+        [ b1.status, b2.status, b3.status ] = [ "match", "match", "match" ];
+        match = true;
+    }
+    return match;
+}
+
+
+const checkMatch = () => {
+    let check = false;
+    for (let i = 0; i < 8; i++) {
+        for (let j = 0; j < 6; j++) {
+            if (match3Blocks(j, i, j+1, i, j+2, i)) { check = true; }
+            if (match3Blocks(i, j, i, j+1, i, j+2)) { check = true; }
+        }
+    }
+    return check;
+}
+
+
+const update = () => {
+
+    _debugCnt++;
+
+    if (_debugCnt < 10) { console.log("DEBUG(" + _debugCnt + "): update()"); }
+
+    // ブロックの消去・追加
+    if (_debugCnt < 10) { console.log("DEBUG(" + _debugCnt + "):   erase"); }
+    for (let i = blocks.length - 1; i >= 0; i--) {
+        if (blocks[i].status == "match") {
+            masu[blocks[i].mx][blocks[i].my] = null;
+            blocks.splice(i, 1);
+            if (startTime != null) {
+                score += 10;
+            }
+        }
+    }
+    for (let x = 0; x < 8; x++) {
+        if (masu[x][0] == null) {
+            blocks.push(new Block(x));
+        }
+    }
+
+    // ブロックの落下・描画
+    if (_debugCnt < 10) { console.log("DEBUG(" + _debugCnt + "):   draw"); }
+    context.clearRect(0, 0, canvas.with, canvas.height);
+    blocks.forEach(block => {
+        if (block.my > -1) {
+            block.status = "ready";
+        }
+        if ((block.my < 7) && (masu[block.mx][block.my+1] == null)) {
+            block.status = "fall";
+        }
+        if (block.status == "fall") {
+            block.fall();
+        }
+        block.draw();
+    });
+    context.strokeStyle = "#000000";
+    for (let i = 1; i < 8; i++) {
+        context.strokeRect(i*80, 0, 0, 640);
+        context.strokeRect(0, i*80, 640, 0);
+    }
+
+    // マッチチェック
+    if (_debugCnt < 10) { console.log("DEBUG(" + _debugCnt + "):   match heck"); }
+    let cnt = 0;
+    for (let x = 0; x < 8; x++) {
+        if ((masu[x].includes(null)) || (masu[x].includes(-1))) {
+            cnt++;
+        }
+    }
+    if (cnt == 0) {
+        status = "fall";
+        if (!checkMatch()) {
+            status = "ready";
+            if (startTime == null) {
+                startTime = Date.now();
+            }
+        }
+    }
+
+    // スコア・残り時間の表示
+    if (_debugCnt < 10) { console.log("DEBUG(" + _debugCnt + "):   score & time left"); }
+    document.getElementById("score").innerText = score;
+    let time = 60;
+    if (startTime != null) {
+        time = 60 - Math.floor((Date.now() - startTime)/1000);
+    }
+    if (time < 0) {
+        [ status, time ] = [ "end", "GAME OVER" ];
+    }
+    document.getElementById("time").innerText = time;
+
+    window.requestAnimationFrame(update); // アニメーションを実行
+}
+
+// ---------------------------------------------------------
+
