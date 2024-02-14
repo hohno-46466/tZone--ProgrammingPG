@@ -15,9 +15,7 @@ let startTime, score, status_;
 let target = null, offset;
 let _debugCnt = 0;
 let _mwX = 80; _mwY = 80;
-
 const code = [  "0x1F347", "0x1F348", "0x1F349", "0x1F34A", "0x1F34D", "0x1F352", "0x1F95D" ];
-
 
 // let _counter1 = 0, _counter2 = 0;
 // const [width, height] = [800, 600]; // [500, 600];
@@ -28,21 +26,21 @@ class Block {
     constructor(x) {
         this.x = x * _mwX;
         this.y = -_mwY;
-        this.mx = x;
-        this.my = -1;
+        this.mX = x;
+        this.mY = -1;
         this.type = Math.floor(Math.random() * code.length);
         this.status = "fall";
-        masu[this.mx][0] = -1;
+        masu[this.mX][0] = -1;
     }
     
     fall() {
         this.y += 8; //8
-        if (Math.floor(this.y/_mwY) == this.my + 1) {
-            if (this.my > -1) {
-                masu[this.mx][this.my] = null
+        if (Math.floor(this.y/_mwY) == this.mY + 1) {
+            if (this.mY > -1) {
+                masu[this.mX][this.mY] = null
             }
-            this.my++;
-            masu[this.mx][this.my] = this;
+            this.mY++;
+            masu[this.mX][this.mY] = this;
         }
     }
 
@@ -50,8 +48,8 @@ class Block {
         [ context.fillStyle, context.font] = [ "#000000", "50px sans-serif" ];
         [ context.textAlign, context.textBaseline ] = ["center", "middle"];
         const text = String.fromCodePoint(code[this.type]);
-        context.clearRect(this.x+0, this.y-0, _mwX, _mwY);  //XXX//
-        context.fillText(text, this.x+40, this.y+40);
+        context.clearRect(this.x, this.y, _mwX, _mwY);  //XXX//
+        context.fillText(text, this.x + _mwX/2, this.y + _mwY/2);
     }
 }
 
@@ -75,9 +73,9 @@ const init = () => {
         [ x, y ] = [ Math.floor(event.offsetX/_mwX), Math.floor(event.offsetY/_mwY) ];
         console.log(x + ":" + y)
         if ((status_ == "ready") && (target != null)) {
-            if ((Math.abs(target.mx - x) == 1) && (target.my == y)) {
+            if ((Math.abs(target.mX - x) == 1) && (target.mY == y)) {
                 target.x = event.offsetX - offset.x;
-            } else if ((Math.abs(target.my - y) == 1) && (target.mx == x)) {
+            } else if ((Math.abs(target.mY - y) == 1) && (target.mX == x)) {
                 target.y = event.offsetY - offset.y;
             }
         }
@@ -87,15 +85,15 @@ const init = () => {
     canvas.addEventListener("mouseup", event => {
         [ x, y ] = [ Math.floor(event.offsetX/_mwX), Math.floor(event.offsetY/_mwY) ];
         if ((status_ == "ready") && (target != null)) {            
-            if (((Math.abs(target.mx - x) == 1) && (target.my == y))
-             || ((Math.abs(target.my - y) == 1) && (target.mx == x)) ) {
-                const [ b1, b2 ] = [ masu[x][y], masu[target.mx][target.my]];
+            if (((Math.abs(target.mX - x) == 1) && (target.mY == y))
+             || ((Math.abs(target.mY - y) == 1) && (target.mX == x)) ) {
+                const [ b1, b2 ] = [ masu[x][y], masu[target.mX][target.mY]];
                 [b1.type, b2.type] = [b2.type, b1.type];
                 if (!checkMatch()) {
                     [ b1.type, b2.type ] = [ b2.type, b1.type ];
                 }
             }
-            [ target.x, target.y ] = [ target.mx * _mwX, target.my * _mwY] ;
+            [ target.x, target.y ] = [ target.mX * _mwX, target.mY * _mwY] ;
             target = null;
         }            
     });
@@ -103,7 +101,7 @@ const init = () => {
     // mouse leave
     canvas.addEventListener("mouseleave", event => {
         if (target != null) {
-            [ target.x, target.y ] = [target.mx * _mwX, target.my * _mwY];
+            [ target.x, target.y ] = [target.mX * _mwX, target.mY * _mwY];
             target = null;
         }
     });
@@ -153,7 +151,7 @@ const update = () => {
     // if (_debugCnt < 10) { console.log("DEBUG(" + _debugCnt + "):   erase"); }
     for (let i = blocks.length - 1; i >= 0; i--) {
         if (blocks[i].status == "match") {
-            masu[blocks[i].mx][blocks[i].my] = null;
+            masu[blocks[i].mX][blocks[i].mY] = null;
             blocks.splice(i, 1);
             if (startTime != null) {
                 score += 10;
@@ -170,10 +168,10 @@ const update = () => {
     // if (_debugCnt < 10) { console.log("DEBUG(" + _debugCnt + "):   draw"); }
     context.clearRect(0, 0, canvas.with, canvas.height);
     blocks.forEach(block => {
-        if (block.my > -1) {
+        if (block.mY > -1) {
             block.status = "ready";
         }
-        if ((block.my < 7) && (masu[block.mx][block.my+1] == null)) {
+        if ((block.mY < 7) && (masu[block.mX][block.mY+1] == null)) {
             block.status = "fall";
         }
         if (block.status == "fall") {
@@ -211,9 +209,9 @@ const update = () => {
     // スコア・残り時間の表示
     // if (_debugCnt < 10) { console.log("DEBUG(" + _debugCnt + "):   score & time left"); }
     document.getElementById("score").innerText = score;
-    let time = 180;
+    let time = 300;
     if (startTime != null) {
-        time = 180 - Math.floor((Date.now() - startTime)/1000);
+        time = time - Math.floor((Date.now() - startTime)/1000);
     }
     if (time < 0) {
         [ status_, time ] = [ "end", "GAME OVER" ];
