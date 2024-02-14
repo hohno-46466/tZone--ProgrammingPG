@@ -14,7 +14,7 @@ let masu, blocks;
 let startTime, score, status_;
 let target = null, offset;
 let _debugCnt = 0;
-let _mwx = 80; _mwy = 80;
+let _mwX = 80; _mwY = 80;
 
 const code = [  "0x1F347", "0x1F348", "0x1F349", "0x1F34A", "0x1F34D", "0x1F352", "0x1F95D" ];
 
@@ -26,8 +26,8 @@ const code = [  "0x1F347", "0x1F348", "0x1F349", "0x1F34A", "0x1F34D", "0x1F352"
 
 class Block {
     constructor(x) {
-        this.x = x * 80;
-        this.y = -80;
+        this.x = x * _mwX;
+        this.y = -_mwY;
         this.mx = x;
         this.my = -1;
         this.type = Math.floor(Math.random() * code.length);
@@ -37,7 +37,7 @@ class Block {
     
     fall() {
         this.y += 8; //8
-        if (Math.floor(this.y/80) == this.my + 1) {
+        if (Math.floor(this.y/_mwY) == this.my + 1) {
             if (this.my > -1) {
                 masu[this.mx][this.my] = null
             }
@@ -50,7 +50,7 @@ class Block {
         [ context.fillStyle, context.font] = [ "#000000", "50px sans-serif" ];
         [ context.textAlign, context.textBaseline ] = ["center", "middle"];
         const text = String.fromCodePoint(code[this.type]);
-        context.clearRect(this.x+0, this.y-0, 80, 80);  //XXX//
+        context.clearRect(this.x+0, this.y-0, _mwX, _mwY);  //XXX//
         context.fillText(text, this.x+40, this.y+40);
     }
 }
@@ -63,7 +63,7 @@ const init = () => {
 
     // mouse down
     canvas.addEventListener("mousedown", event => {
-        [ x, y ] = [ Math.floor(event.offsetX/80), Math.floor(event.offsetY/80) ];
+        [ x, y ] = [ Math.floor(event.offsetX/_mwX), Math.floor(event.offsetY/_mwY) ];
         if (status_ == "ready") {
             target = masu[x][y];
             offset = { x:event.offsetX - target.x, y:event.offsetY - target.y }
@@ -72,7 +72,7 @@ const init = () => {
 
     // mouse move
     canvas.addEventListener("mousemove", event => {
-        [ x, y ] = [ Math.floor(event.offsetX/80), Math.floor(event.offsetY/80) ];
+        [ x, y ] = [ Math.floor(event.offsetX/_mwX), Math.floor(event.offsetY/_mwY) ];
         console.log(x + ":" + y)
         if ((status_ == "ready") && (target != null)) {
             if ((Math.abs(target.mx - x) == 1) && (target.my == y)) {
@@ -85,7 +85,7 @@ const init = () => {
 
     // mouse up
     canvas.addEventListener("mouseup", event => {
-        [ x, y ] = [ Math.floor(event.offsetX/80), Math.floor(event.offsetY/80) ];
+        [ x, y ] = [ Math.floor(event.offsetX/_mwX), Math.floor(event.offsetY/_mwY) ];
         if ((status_ == "ready") && (target != null)) {            
             if (((Math.abs(target.mx - x) == 1) && (target.my == y))
              || ((Math.abs(target.my - y) == 1) && (target.mx == x)) ) {
@@ -95,7 +95,7 @@ const init = () => {
                     [ b1.type, b2.type ] = [ b2.type, b1.type ];
                 }
             }
-            [ target.x, target.y ] = [ target.mx * 80, target.my * 80] ;
+            [ target.x, target.y ] = [ target.mx * _mwX, target.my * _mwY] ;
             target = null;
         }            
     });
@@ -103,7 +103,7 @@ const init = () => {
     // mouse leave
     canvas.addEventListener("mouseleave", event => {
         if (target != null) {
-            [ target.x, target.y ] = [target.mx * 80, target.my * 80];
+            [ target.x, target.y ] = [target.mx * _mwX, target.my * _mwY];
             target = null;
         }
     });
@@ -183,10 +183,10 @@ const update = () => {
     });
     
     context.strokeStyle = "#000000";
-    context.strokeRect(0, 0, 640, 640);
+    context.strokeRect(0, 0, _mwX*8, _mwY*8);
     for (let i = 1; i < 8; i++) {
-        context.strokeRect(i*80, 0, 0, 640);
-        context.strokeRect(0, i*80, 640, 0);
+        context.strokeRect(i*_mwX, 0, 0, _mwY*8);
+        context.strokeRect(0, i*_mwY, _mwX*8, 0);
     }
     context.clearRect(0, 0, canvas.with, canvas.height);
 
