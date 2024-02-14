@@ -4,18 +4,20 @@
 //
 // Note:
 // This JS file (template.js) and the corresponding HTML file (template.html) refer to the following pages.
-// * Weekly Ascii No.1xxx pp.yy-zz
+// * Weekly Ascii No.1475 pp.42-47
 //
 
-// Last update:
+// Last update: Thu Feb 15 06:22:59 JST 2024
 
 let canvas, context;
 let masu, blocks;
-let startTime, score, status;
+let startTime, score, status_;
 let target = null, offset;
 let _debugCnt = 0;
+let _mwx = 80; _mwy = 80;
 
 const code = [  "0x1F347", "0x1F348", "0x1F349", "0x1F34A", "0x1F34D", "0x1F352", "0x1F95D" ];
+
 
 // let _counter1 = 0, _counter2 = 0;
 // const [width, height] = [800, 600]; // [500, 600];
@@ -34,7 +36,7 @@ class Block {
     }
     
     fall() {
-        this.y += 8;
+        this.y += 8; //8
         if (Math.floor(this.y/80) == this.my + 1) {
             if (this.my > -1) {
                 masu[this.mx][this.my] = null
@@ -48,6 +50,7 @@ class Block {
         [ context.fillStyle, context.font] = [ "#000000", "50px sans-serif" ];
         [ context.textAlign, context.textBaseline ] = ["center", "middle"];
         const text = String.fromCodePoint(code[this.type]);
+        context.clearRect(this.x+0, this.y-0, 80, 80);  //XXX//
         context.fillText(text, this.x+40, this.y+40);
     }
 }
@@ -61,7 +64,7 @@ const init = () => {
     // mouse down
     canvas.addEventListener("mousedown", event => {
         [ x, y ] = [ Math.floor(event.offsetX/80), Math.floor(event.offsetY/80) ];
-        if (status == "ready") {
+        if (status_ == "ready") {
             target = masu[x][y];
             offset = { x:event.offsetX - target.x, y:event.offsetY - target.y }
         }
@@ -70,7 +73,8 @@ const init = () => {
     // mouse move
     canvas.addEventListener("mousemove", event => {
         [ x, y ] = [ Math.floor(event.offsetX/80), Math.floor(event.offsetY/80) ];
-        if ((status == "ready") && (target != null)) {
+        console.log(x + ":" + y)
+        if ((status_ == "ready") && (target != null)) {
             if ((Math.abs(target.mx - x) == 1) && (target.my == y)) {
                 target.x = event.offsetX - offset.x;
             } else if ((Math.abs(target.my - y) == 1) && (target.mx == x)) {
@@ -82,11 +86,10 @@ const init = () => {
     // mouse up
     canvas.addEventListener("mouseup", event => {
         [ x, y ] = [ Math.floor(event.offsetX/80), Math.floor(event.offsetY/80) ];
-
-        if ((status == "ready") && (target != null)) {            
+        if ((status_ == "ready") && (target != null)) {            
             if (((Math.abs(target.mx - x) == 1) && (target.my == y))
              || ((Math.abs(target.my - y) == 1) && (target.mx == x)) ) {
-                const [b1, b2] = [ masu[x][y], masu[target.mx][target.my]];
+                const [ b1, b2 ] = [ masu[x][y], masu[target.mx][target.my]];
                 [b1.type, b2.type] = [b2.type, b1.type];
                 if (!checkMatch()) {
                     [ b1.type, b2.type ] = [ b2.type, b1.type ];
@@ -97,7 +100,6 @@ const init = () => {
         }            
     });
     
-
     // mouse leave
     canvas.addEventListener("mouseleave", event => {
         if (target != null) {
@@ -116,9 +118,9 @@ const initGame = () => {
     for (let x = 0; x < 8; x++) {
         masu[x] = new Array(8).fill(null);
     }
-    [startTime, score, status, target ] = [ null, 0, "fall", null];
+    [ startTime, score, status_, target ] = [ null, 0, "fall", null];
+    context.clearRect(0, 0, canvas.width, canvas.height); //XXX//
 }
-
 
 const match3Blocks = (x1, y1, x2, y2, x3, y3) => {
     let match = false;
@@ -129,7 +131,6 @@ const match3Blocks = (x1, y1, x2, y2, x3, y3) => {
     }
     return match;
 }
-
 
 const checkMatch = () => {
     let check = false;
@@ -142,15 +143,14 @@ const checkMatch = () => {
     return check;
 }
 
-
 const update = () => {
 
     _debugCnt++;
 
-    if (_debugCnt < 10) { console.log("DEBUG(" + _debugCnt + "): update()"); }
+    // if (_debugCnt < 250) { console.log("DEBUG(" + _debugCnt + "): update()"); }
 
     // ブロックの消去・追加
-    if (_debugCnt < 10) { console.log("DEBUG(" + _debugCnt + "):   erase"); }
+    // if (_debugCnt < 10) { console.log("DEBUG(" + _debugCnt + "):   erase"); }
     for (let i = blocks.length - 1; i >= 0; i--) {
         if (blocks[i].status == "match") {
             masu[blocks[i].mx][blocks[i].my] = null;
@@ -167,7 +167,7 @@ const update = () => {
     }
 
     // ブロックの落下・描画
-    if (_debugCnt < 10) { console.log("DEBUG(" + _debugCnt + "):   draw"); }
+    // if (_debugCnt < 10) { console.log("DEBUG(" + _debugCnt + "):   draw"); }
     context.clearRect(0, 0, canvas.with, canvas.height);
     blocks.forEach(block => {
         if (block.my > -1) {
@@ -181,14 +181,17 @@ const update = () => {
         }
         block.draw();
     });
+    
     context.strokeStyle = "#000000";
+    context.strokeRect(0, 0, 640, 640);
     for (let i = 1; i < 8; i++) {
         context.strokeRect(i*80, 0, 0, 640);
         context.strokeRect(0, i*80, 640, 0);
     }
+    context.clearRect(0, 0, canvas.with, canvas.height);
 
     // マッチチェック
-    if (_debugCnt < 10) { console.log("DEBUG(" + _debugCnt + "):   match heck"); }
+    // if (_debugCnt < 10) { console.log("DEBUG(" + _debugCnt + "):   match heck"); }
     let cnt = 0;
     for (let x = 0; x < 8; x++) {
         if ((masu[x].includes(null)) || (masu[x].includes(-1))) {
@@ -196,9 +199,9 @@ const update = () => {
         }
     }
     if (cnt == 0) {
-        status = "fall";
+        status_ = "fall";
         if (!checkMatch()) {
-            status = "ready";
+            status_ = "ready";
             if (startTime == null) {
                 startTime = Date.now();
             }
@@ -206,14 +209,14 @@ const update = () => {
     }
 
     // スコア・残り時間の表示
-    if (_debugCnt < 10) { console.log("DEBUG(" + _debugCnt + "):   score & time left"); }
+    // if (_debugCnt < 10) { console.log("DEBUG(" + _debugCnt + "):   score & time left"); }
     document.getElementById("score").innerText = score;
-    let time = 60;
+    let time = 180;
     if (startTime != null) {
-        time = 60 - Math.floor((Date.now() - startTime)/1000);
+        time = 180 - Math.floor((Date.now() - startTime)/1000);
     }
     if (time < 0) {
-        [ status, time ] = [ "end", "GAME OVER" ];
+        [ status_, time ] = [ "end", "GAME OVER" ];
     }
     document.getElementById("time").innerText = time;
 
@@ -221,4 +224,3 @@ const update = () => {
 }
 
 // ---------------------------------------------------------
-
