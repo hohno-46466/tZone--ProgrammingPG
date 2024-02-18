@@ -16,16 +16,13 @@ This HTML file (spirograph.html) and the corresponding JS file (spirograph.js) r
   <body onload="initCanvas()">
     <p>Spirograph</p>
     <form id="form">
-      定円の半径：
-      <input type="number" id="rc" size="2" value="120" min="50" max="200">
-      動円の半径：
-      <input type="number" id="rm" size="2" value="65" min="50" max="100">
-      描画点の半径：
-      <input type="number" id="rd" size="2" value="30" min="10" max="200">
+      定円の半径：<input type="number" id="rc" size="2" value="120" min="50" max="200">
+      動円の半径：<input type="number" id="rm" size="2" value="65" min="50" max="100">
+      描画点の半径：<input type="number" id="rd" size="2" value="30" min="10" max="200">
       <input type="button" value="Draw" id="draw" onclick="spiro()">
       <span id="status"></span>
     </form>
     <hr>
-    <canvas id="spirograph" style="background-color:#000000;"></canvas>
+    <canvas id="spirograph" style="background-color:#EEEEEE;"></canvas>
   </body>
 </html>
