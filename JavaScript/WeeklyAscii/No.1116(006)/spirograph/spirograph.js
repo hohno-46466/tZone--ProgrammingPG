@@ -107,36 +107,3 @@ function gcd(a, b) {
 }
 
 // ---------------------------------------------------------
-
-// const init = () => {
-//     // キャンバスの取得
-//     canvas = document.getElementById("myCanvas");  // キャンバスの取得
-//     context = canvas.getContext("2d");
-//     [canvas.width,canvas.height] = [width,height]; // キャンバスのサイズを設定
-//     context.lineWidth = 4;
-//     // マウスイベントの登録
-//     canvas.addEventListener("click",start_ABC);    // クリックしたとき
-//     canvas.addEventListener("mousemove",move_ABC); // マウスを動かしたとき
-//
-//     update();
-// }
-
-// const start_ABC = event => {
-//     if ((_counter1 % 1) == 0) {
-//   　 　console.log("start_ABC : " + _counter1);
-//     }
-//     _counter1++;
-// }
-
-// const move_ABC = event => {
-//     if ((_counter2 % 10) == 0) {
-// 	    　console.log("movet_ABC : " + _counter2);
-//     }
-//     _counter2++;
-// }
-
-// const update = () => {
-//     window.requestAnimationFrame(update); // アニメーションを実行
-// }
-
-// ---------------------------------------------------------
