@@ -1,0 +1,15 @@
+/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/workspace/cs_study/HelloWorld/bin/Debug/net9.0/HelloWorld
+/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/workspace/cs_study/HelloWorld/bin/Debug/net9.0/HelloWorld.deps.json
+/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/workspace/cs_study/HelloWorld/bin/Debug/net9.0/HelloWorld.runtimeconfig.json
+/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/workspace/cs_study/HelloWorld/bin/Debug/net9.0/HelloWorld.dll
+/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/workspace/cs_study/HelloWorld/bin/Debug/net9.0/HelloWorld.pdb
+/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/workspace/cs_study/HelloWorld/obj/Debug/net9.0/HelloWorld.GeneratedMSBuildEditorConfig.editorconfig
+/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/workspace/cs_study/HelloWorld/obj/Debug/net9.0/HelloWorld.AssemblyInfoInputs.cache
+/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/workspace/cs_study/HelloWorld/obj/Debug/net9.0/HelloWorld.AssemblyInfo.cs
+/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/workspace/cs_study/HelloWorld/obj/Debug/net9.0/HelloWorld.csproj.CoreCompileInputs.cache
+/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/workspace/cs_study/HelloWorld/obj/Debug/net9.0/HelloWorld.sourcelink.json
+/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/workspace/cs_study/HelloWorld/obj/Debug/net9.0/HelloWorld.dll
+/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/workspace/cs_study/HelloWorld/obj/Debug/net9.0/refint/HelloWorld.dll
+/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/workspace/cs_study/HelloWorld/obj/Debug/net9.0/HelloWorld.pdb
+/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/workspace/cs_study/HelloWorld/obj/Debug/net9.0/HelloWorld.genruntimeconfig.cache
+/Users/hohno/GitHub/tZone--ProgrammingPG/Csharp/workspace/cs_study/HelloWorld/obj/Debug/net9.0/ref/HelloWorld.dll
