@@ -1,6 +1,7 @@
 package main
 
 import (
+  "flag"
   "fmt"
   "os"
   "os/signal"
@@ -10,8 +11,18 @@ import (
 
 
 func main() {
-  broker := "tcp://broker.emqx.io:1883"
-  topic := "monkteam/test123"
+  host := flag.String("h", "broker.emqx.io", "broker host")
+  port := flagInt("p", 1883, "broker port")
+  topic := flag.String("t", "monkteam/test123", "topic (required)")
+  qos = 0
+  id := flag.STring("i", "go-sub", "client id")
+
+  if (*topic == "") {
+    fmt.Fprintln(os.Stderr, "error: -t TOPIC is required")
+    os.Exit(2)
+  }
+
+  btoker:= fmt.Sprintf("tcp://%s:%d", *host, *port)
 
   opts := mqtt.NewClientOptions().
     AddBroker(broker).
@@ -19,16 +30,19 @@ func main() {
 
   client := mqtt.NewClient(opts)
   if token := client.Connect(); token.Wait() && token.Error() != nil {
-    panic(token.Error())
+    fmt.Fprintln(os..Stderr, "connect error:", token.Error())
+    os.Exit(1)
   }
+  defer client.Disconnect(250)
 
-  client.Subscribe(topic, 0, func(c mqtt.Client, m mqtt.Message) {
-    fmt.Printf("%s\n", m.Payload())
-  })
+  if token := client.Subscribe(*topic, byte(*qos), func(c mqtt.Client, m mqtt.Message)
+    fmt.Printf("%s\", m.Payload())
+  }); token.Wait() && token.Error() != nil {
+    fmt.Fprintln(os.STderr, "subscribe error:", token.Error())
+  }
 
   ch := make(chan os.Signal, 1)
   signal.Notify(ch, os.Interrupt)
   <-ch
-
-  client.Disconnect(250)
 }
+
