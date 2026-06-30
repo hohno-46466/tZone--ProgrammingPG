@@ -13,21 +13,21 @@ while true; do
     LINES=$(tput lines)
     COLS=$(tput cols)
 
-    # 【互換性修正】MacとLinuxで1秒未満（0.1秒桁）を安全に取得
+    # 【変更】LC_TIME=C と %a を追加し、Mac/Linux双方で安全にミリ秒まで結合
     if [[ "$OSTYPE" == "darwin"* ]]; then
-        TIME_STR=$(date "+%Y-%m-%d %H:%M:%S")$(date "+.%1N" 2>/dev/null || echo ".0")
+        TIME_STR=$(LC_TIME=C date "+%Y-%m-%d (%a) %H:%M:%S")$(date "+.%1N" 2>/dev/null || echo ".0")
     else
-        TIME_STR=$(date "+%Y-%m-%d %H:%M:%S.%1N")
+        TIME_STR=$(LC_TIME=C date "+%Y-%m-%d (%a) %H:%M:%S.%1N")
     fi
 
-    # 文字列の長さを取得（すべて半角なのでMacでも文字数＝バイト数で安全）
+    # 文字列の長さを取得（すべて半角なので安全に計算可能）
     STR_LEN=${#TIME_STR}
 
     # 中央の座標を計算
     TARGET_ROW=$((LINES / 2))
     TARGET_COL=$(((COLS - STR_LEN) / 2))
 
-    # カーソルを中央に移動して時刻を描画（%s で安全に出力）
+    # カーソルを中央に移動して時刻を描画
     printf "\e[%d;%dH\e[K%s" "$TARGET_ROW" "$TARGET_COL" "$TIME_STR"
 
     # 0.05秒（50ミリ秒）待機してループ
