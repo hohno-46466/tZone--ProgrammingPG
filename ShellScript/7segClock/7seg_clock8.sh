@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# First version: 2026-06-30(Tue) 23:53 JST / 2026-06-30(Tue) 14:53 UTC by @hohno_at_MonkKB & Gemini AI
+
 # 終了時（Ctrl+C）にカーソルを戻して画面をクリア
 trap 'printf "\e[?25h"; clear; exit' INT TERM
 

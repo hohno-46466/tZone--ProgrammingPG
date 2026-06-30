@@ -3,6 +3,104 @@
 A test zone for the various programming languages (public repository)
 
     ./tZone--ProgrammingPG
+     ├──  00README.md -> README.md
+     ├──  Csharp/
+     │   ├──  1週間でC＃の基礎が学べる本 -> Csharp_basics_in_a_week
+     │   ├──  Csharp_basics_in_a_week/
+     │   │   ├──  Day1/
+     │   │   ├──  Day2/
+     │   │   ├──  Day3/
+     │   │   ├──  Day4/
+     │   │   ├──  Day5/
+     │   │   ├──  Day6/
+     │   │   ├──  Day7/
+     │   │   ├──  HowToBuildIt.txt
+     │   │   ├──  HowToBuildIt.txt.bak
+     │   │   └──  README.md
+     │   ├──  MQTT/
+     │   │   └──  workspace/
+     │   ├──  README.md
+     │   └──  workspace/
+     │       └──  cs_study/
+     ├──  Go/
+     │   ├──  README.md
+     │   ├──  README.pdf
+     │   ├──  go-hello/
+     │   │   ├──  app
+     │   │   ├──  go.mod
+     │   │   └──  main.go
+     │   ├──  go-mqtt-sub/
+     │   │   ├──  00README.txt
+     │   │   ├──  go.mod
+     │   │   ├──  go.sum
+     │   │   └──  mqttsub.go
+     │   └──  go-tcp-echo/
+     │       ├──  go.mod
+     │       └──  server.go
+     ├──  HTML/
+     │   ├──  Emmet/
+     │   │   ├──  README.md
+     │   │   └──  test01/
+     │   └──  README.md
+     ├──  JavaScript/
+     │   ├──  README.md
+     │   ├──  WeeklyAscii/
+     │   │   ├──  No.1116(006)/
+     │   │   ├──  No.1376(262)/
+     │   │   ├──  No.1381(267)/
+     │   │   ├──  No.1386(272)/
+     │   │   ├──  No.1474(360)/
+     │   │   ├──  No.1475(361)/
+     │   │   ├──  NowEditing -> No.1475(361)
+     │   │   ├──  README.md
+     │   │   ├──  template.html
+     │   │   └──  template.js
+     │   ├──  box2dweb/
+     │   │   ├──  Box2D.js
+     │   │   ├──  Box2d.min.js
+     │   │   ├──  README.md
+     │   │   ├──  demo-google-gadget.xml
+     │   │   ├──  demo.html
+     │   │   └──  example.html
+     │   ├──  clockClockClocks/
+     │   │   ├──  README.md
+     │   │   ├──  clock01/
+     │   │   └──  test00/
+     │   └──  template/
+     │       ├──  template-MQTT.html
+     │       ├──  template-MQTT.js
+     │       ├──  template.html
+     │       └──  template.js
+     ├──  Notebook/
+     │   ├──  00README.md -> README.md
+     │   ├──  P20260317/
+     │   │   ├──  P20260317/
+     │   │   ├──  Untitled.ipynb
+     │   │   ├──  Untitled1.ipynb
+     │   │   ├──  Untitled2.ipynb
+     │   │   ├──  Untitled3.ipynb
+     │   │   ├──  celsius_fahrenheit.csv
+     │   │   └──  data.csv -> celsius_fahrenheit.csv
+     │   └──  README.md
+     ├──  Python/
+     │   ├──  README.md
+     │   └──  solidpython/
+     │       ├──  example1.py
+     │       └──  sample.scad
+     ├──  README.md
+     ├──  README.md.old
+     ├──  SQLite/
+     │   └──  README.md
+     ├──  ShellScript/
+     │   └──  7segClock/
+     │       ├──  7seg_clock8.sh
+     │       └──  clock.sh
+     └──  Untitled.ipynb
+     
+     44 directories, 50 files (Wed Jul  1 00:09:47 JST 2026)
+
+
+    ./tZone--ProgrammingPG
      ├──  Csharp/
      │   ├──  1週間でC＃の基礎が学べる本 -> Csharp_basics_in_a_week
      │   ├──  Csharp_basics_in_a_week/
