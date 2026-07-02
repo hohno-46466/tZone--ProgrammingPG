@@ -1,0 +1,58 @@
+#!/bin/bash
+
+# 終了時（Ctrl+C）にカーソルを再表示し、画面をクリア
+trap 'printf "\e[?25h"; clear; exit 130' INT TERM
+
+# 画面の初期化
+clear
+printf "\e[?25h" 
+printf "\e[?25l" 
+
+# 変数の初期化
+LINES=$(tput lines)
+COLS=$(tput cols)
+
+# ミリ秒対応チェック
+if date "+%1N" >/dev/null 2>&1 && [ "$(date "+%1N")" != "%1N" ]; then
+    HAS_MILLISEC=true
+else
+    HAS_MILLISEC=false
+fi
+
+while true; do
+    # --------------------------------------------------------------------------
+    # A. サイズ変更受付セクション
+    # --------------------------------------------------------------------------
+    trap '' SIGWINCH
+
+    # 画面サイズの動的取得
+    LINES=$(tput lines) || { printf "\e[?25h\n[ERROR] tput lines failed\n"; exit 91; }
+    COLS=$(tput cols)   || { printf "\e[?25h\n[ERROR] tput cols failed\n";  exit 92; }
+
+    # --------------------------------------------------------------------------
+    # B. シグナル完全防御セクション (ここから下は絶対に割り込ませない)
+    # --------------------------------------------------------------------------
+    # 空文字（''）を指定することで、以降のコマンド実行中に発生した SIGWINCH を完全に無視する。
+    # これにより、date/printf/sleep が中断されず、Bashが while をブレイクするのを根本から防ぐ。
+
+    # 時間データの取得
+    if [ "$HAS_MILLISEC" = true ]; then
+        TIME_STR=$(LC_TIME=C date "+%Y-%m-%d (%a) %H:%M:%S.%1N") || continue
+    else
+        TIME_STR=$(LC_TIME=C date "+%Y-%m-%d (%a) %H:%M:%S.0") || continue
+    fi
+
+    STR_LEN=${#TIME_STR}
+    TARGET_ROW=$((LINES / 2))
+    TARGET_COL=$(((COLS - STR_LEN) / 2))
+
+    # 時刻の描画（文法エラー修正済）
+    printf "\e[%d;%dH\e[K%s" "$TARGET_ROW" "$TARGET_COL" "$TIME_STR" || { printf "\e[?25h\n[ERROR] printf failed\n"; exit 93; }
+
+    # スリープ処理
+    trap 'clear; true' SIGWINCH
+    sleep 0.05 || true
+done
+
+# もしBashのバグ等でwhileループを突き抜けてしまった場合は、ここで検知される
+exit 94
